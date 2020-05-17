@@ -1,0 +1,7 @@
+<h1><%= @song.name %></h1>
+<% @artists.map do |artist| %>
+<%= link_to artist.name, artist_path(artist) if artist.id == @song.artist_id %>
+<%end%>
+<% @genres.map do |genre| %>
+<%= link_to genre.name, genre_path(genre) if genre.id == @song.genre_id %>
+<%end%>
