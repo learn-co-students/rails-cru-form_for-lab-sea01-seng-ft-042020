@@ -1,1 +1,5 @@
-<h1><%= @genre.name %></h1>
+<h1><%= @genre.name %></h1><br>
+<h2>Artists</h2><br><br>
+<% @genre.artists.uniq.each do |a|%>
+<h3><%= link_to a.name, a %></h3><br>
+<% end %>
